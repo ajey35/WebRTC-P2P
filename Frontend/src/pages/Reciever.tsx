@@ -18,7 +18,7 @@ function Receiver() {
   useEffect(() => {
     setConnectionStatus("connecting")
 
-    const socket = new WebSocket("ws://ec2-18-234-134-82.compute-1.amazonaws.com:8080")
+    const socket = new WebSocket("wss://mrajey.duckdns.org/ws/")
     socketRef.current = socket
 
     socket.onopen = () => {

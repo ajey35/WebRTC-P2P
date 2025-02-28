@@ -17,7 +17,7 @@ function Sender() {
   const peerConnectionRef = useRef<RTCPeerConnection | null>(null)
 
   useEffect(() => {
-    const ws = new WebSocket("ws://ec2-18-234-134-82.compute-1.amazonaws.com:8080")
+    const ws = new WebSocket("wss://mrajey.duckdns.org/ws/")
 
     ws.onopen = () => {
       ws.send(JSON.stringify({ type: "sender" }))
